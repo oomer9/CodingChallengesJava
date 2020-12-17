@@ -30,5 +30,19 @@ public class CodingChallengesJavaTests {
 		String expected = "2";
 		assertEquals(value, expected);
 	}
+	@Test
+	public void HighestOccurringCharTest4() {
+		String str = "";
+		String value = CodingChallengesJava.HighestOccurringChar(str);
+		String expected = null;
+		assertEquals(value, expected);
+	}
+	@Test
+	public void HighestOccurringCharTest5() {
+		String str = null;
+		String value = CodingChallengesJava.HighestOccurringChar(str);
+		String expected = null;
+		assertEquals(value, expected);
+	}
 
 }
