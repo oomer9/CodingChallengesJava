@@ -1,12 +1,12 @@
 package codingChallengesPackage;
-
 import java.util.HashMap;
 import java.util.Map.Entry;
 
 public class CodingChallengesJava {
 
 	public static void main(String[] args) {
-		String test =  HighestOccurringChar(null);
+		//String test =  HighestOccurringChar(null);
+		String test =  RemoveSameLetterInDifferentCaps("adDbBeBe");
 		System.out.print(test);
 	}
 
@@ -45,6 +45,41 @@ public class CodingChallengesJava {
 		}
 		
 		return rtnVal;
+	}
+	
+	public static String RemoveSameLetterInDifferentCaps(String str) {
+		String newString = str;
+		try {
+			Boolean isValid = true;
+			while(isValid) {
+				String tempString = "";
+				for(int i =0; i<newString.length();i++) {
+					if(tempString.length()==0) {
+						tempString = tempString.concat(Character.toString(newString.charAt(i)));
+					}
+					else if(Character.toLowerCase(newString.charAt(i)) == Character.toLowerCase(tempString.charAt(i-1)) && newString.charAt(i)!=tempString.charAt(i-1)) {
+						//Helper method to delete matching letter and return new List 
+						newString = RemoveMatch(newString,i);
+						isValid = true;
+						break;
+					}
+					else {
+						tempString = tempString.concat(Character.toString(newString.charAt(i)));
+						isValid = false;
+					}
+				}
+			}
+			
+		}
+		catch(Exception ex) {
+			newString = ex.getMessage();
+		}
+		return newString;
+	}
+	private static String RemoveMatch(String str, int i) {
+		StringBuilder sb = new StringBuilder(str);
+		sb.delete(i-1, i+1);	
+		return sb.toString();
 	}
 
 }

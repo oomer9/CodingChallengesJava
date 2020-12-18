@@ -44,5 +44,33 @@ public class CodingChallengesJavaTests {
 		String expected = null;
 		assertEquals(value, expected);
 	}
+	@Test
+	public void RemoveSameLetterInDifferentCapsTest1() {
+		String str = "aaCcdaE";
+		String value = CodingChallengesJava.RemoveSameLetterInDifferentCaps(str);
+		String expected = "aadaE";
+		assertEquals(value, expected);
+	}
+	@Test
+	public void RemoveSameLetterInDifferentCapsTest2() {
+		String str = "BBNnMmCc";
+		String value = CodingChallengesJava.RemoveSameLetterInDifferentCaps(str);
+		String expected = "BB";
+		assertEquals(value, expected);
+	}
+	@Test
+	public void RemoveSameLetterInDifferentCapsTest3() {
+		String str = "CdDAaE";
+		String value = CodingChallengesJava.RemoveSameLetterInDifferentCaps(str);
+		String expected = "CE";
+		assertEquals(value, expected);
+	}
+	@Test
+	public void RemoveSameLetterInDifferentCapsTest4() {
+		String str = "asdcasd";
+		String value = CodingChallengesJava.RemoveSameLetterInDifferentCaps(str);
+		String expected = "asdcasd";
+		assertEquals(value, expected);
+	}
 
 }
