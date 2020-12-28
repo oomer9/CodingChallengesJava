@@ -6,8 +6,9 @@ public class CodingChallengesJava {
 
 	public static void main(String[] args) {
 		//String test =  HighestOccurringChar(null);
-		String test =  RemoveSameLetterInDifferentCaps("adDbBeBe");
-		System.out.print(test);
+		//String test =  RemoveSameLetterInDifferentCaps("adDbBeBe");
+		int gcd = GreatestCommonDivisor(54,24);
+		System.out.print(gcd);
 	}
 
 	// This method returns the most occurring char. 
@@ -52,7 +53,7 @@ public class CodingChallengesJava {
 		try {
 			Boolean isValid = true;
 			while(isValid) {
-				String tempString = "";
+				String tempString = ""; 	
 				for(int i =0; i<newString.length();i++) {
 					if(tempString.length()==0) {
 						tempString = tempString.concat(Character.toString(newString.charAt(i)));
@@ -81,5 +82,23 @@ public class CodingChallengesJava {
 		sb.delete(i-1, i+1);	
 		return sb.toString();
 	}
+	public static int GreatestCommonDivisor(int num1, int num2) {
+		int gcd = -1;
+		try {
+			int smallerNum = num1>num2?num2:num1;
+			for(int i =1;i<=smallerNum;i++) {
+				if(num1%i==0 && num2%i==0) {
+					gcd = i;
+				}
+			}
+			
+		}
+		catch(Exception ex) {
+			throw ex;
+		}
+		return gcd;
+	}
+	
+	
 
 }

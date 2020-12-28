@@ -72,5 +72,29 @@ public class CodingChallengesJavaTests {
 		String expected = "asdcasd";
 		assertEquals(value, expected);
 	}
+	@Test
+	public void GreatestCommonDivisorTest1() {
+		int num1 = 24;
+		int num2 = 54;
+		int expected = 6;
+		int value = CodingChallengesJava.GreatestCommonDivisor(num1, num2);
+		assertEquals(value, expected);
+	}
+	@Test
+	public void GreatestCommonDivisorTest2() {
+		int num1 = 84;
+		int num2 = 132;
+		int expected = 12;
+		int value = CodingChallengesJava.GreatestCommonDivisor(num1, num2);
+		assertEquals(value, expected);
+	}
+	@Test
+	public void GreatestCommonDivisorTest3() {
+		int num1 = 30;
+		int num2 = 105;
+		int expected = 15;
+		int value = CodingChallengesJava.GreatestCommonDivisor(num1, num2);
+		assertEquals(value, expected);
+	}
 
 }
