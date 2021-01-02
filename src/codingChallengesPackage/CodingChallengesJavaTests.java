@@ -96,5 +96,20 @@ public class CodingChallengesJavaTests {
 		int value = CodingChallengesJava.GreatestCommonDivisor(num1, num2);
 		assertEquals(value, expected);
 	}
+	@Test
+	public void bubbleSortTest1() {
+		int[] list = {4,21,5,6,1,9};
+		int[] expected = {1,4,5,6,9,21};
+		int[] value = CodingChallengesJava.bubbleSort(list);
+		assertArrayEquals(value, expected);
+	}
+	
+	@Test
+	public void bubbleSortTest2() {
+		int[] list = {4,21,3,99,12,9,44,12};
+		int[] expected = {3,4,9,12,12,21,44,99};
+		int[] value = CodingChallengesJava.bubbleSort(list);
+		assertArrayEquals(value, expected);
+	}
 
 }

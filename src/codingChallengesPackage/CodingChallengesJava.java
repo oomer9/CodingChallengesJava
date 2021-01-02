@@ -7,9 +7,14 @@ public class CodingChallengesJava {
 	public static void main(String[] args) {
 		//String test =  HighestOccurringChar(null);
 		//String test =  RemoveSameLetterInDifferentCaps("adDbBeBe");
-		int gcd = GreatestCommonDivisor(54,24);
-		System.out.print(gcd);
+		//int gcd = GreatestCommonDivisor(54,24);
+		int[] list = {4,21,5,6,1,9};
+		int[] sortedList = bubbleSort(list);
+		int[] expected = {1,4,5,6,9,21};
+		//System.out.print();
 	}
+
+	
 
 	// This method returns the most occurring char. 
 	// if more than one then returns 1st in chronological order
@@ -97,6 +102,28 @@ public class CodingChallengesJava {
 			throw ex;
 		}
 		return gcd;
+	}
+	
+	public static int[] bubbleSort(int[] list){
+		boolean isInvalid  = true;
+		try {
+			while(isInvalid) {
+				isInvalid = false;
+				for(int i = 0; i < list.length-1 ;i++) {
+					if(list[i] > list[i+1]) {
+						int temp = list[i];
+						list[i] = list[i+1];
+						list[i+1] = temp;
+						isInvalid = true;
+					}
+				}
+			}
+		}
+		catch(Exception ex) {
+			throw ex;
+		}
+		return list;
+		
 	}
 	
 	
