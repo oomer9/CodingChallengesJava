@@ -8,3 +8,6 @@
 
 ## 3. GreatestCommonDivisor
 ### this method takes two ints and returns an int that is the Greatest Common Factor for them 
+
+## 4. BubbleSort
+### this method takes a list and sorts it using bubble sort 
